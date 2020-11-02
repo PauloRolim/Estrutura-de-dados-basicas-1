@@ -33,6 +33,7 @@ bool buscaRegressiva(int *vetor, int n_elementos, int chave){
         if (vetor[ii]==chave)
         {
             return true;
+            std::cout << "achei, mizera!";
         } else
         {
             return false;;
@@ -60,7 +61,7 @@ bool busca_recursiva(int *vetor, int n_elementos, int chave){
 
 int main(int argc, char *argv[]){
 
-    int vetor_entrada[8] = {2,7,9,1,4,3,5,6};
+    int vetor_entrada[8] = {2,7,9,1,4,3,5};
 
     std::cout << "Os numeros do vetor são: ";
     for (int i = 0; i < 8; i++)
@@ -72,7 +73,7 @@ int main(int argc, char *argv[]){
 
     std::cout << " " << std::endl;
 
-    if (busca_recursiva(vetor_entrada, 8, 2) == true)
+    if (buscaRegressiva(vetor_entrada, 8, 2) == true)
     {
         std::cout << "Número encontrado!"<< std::endl;
     } else
