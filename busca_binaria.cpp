@@ -21,30 +21,45 @@ bool buscaBinaria(int *vetor, int n_elementos, int chave){
 }
 
 bool buscaBinariaPlus (int *vetor, int n_elementos, int chave){
-
-    if (n_elementos == 0)
-    {
-        return false;
-    }
-
-    int ii = n_elementos / 2;
-
-    if (vetor[ii] == chave)
-    {
-        return true;
-    }
+    int pp = 0;
+    int qq = n_elementos - 1;
     
+    while (qq - pp + 1 > 0)
+    {
+        int ii = (pp + qq) / 2;
 
-    
+        if (vetor[ii] == chave)
+        {
+            return true;
+        }
+
+        if (vetor[ii] > chave)
+        {
+            qq = ii - 1;
+        } else
+        {
+            pp = ii + 1;
+        }
+        
+    }   
 
     return false;
 }
+
 
 int main(){
 
     int vetorEntrada[6] = {2,3,5,6,8,9};
 
-    std::cout << 
+    if (buscaBinariaPlus(vetorEntrada, 6, 6) == true)
+    {
+        std::cout << "Achei mizera!" << std::endl;
+    } else
+    {
+        std::cout << "Não achei..." << std::endl;
+    }
+    
+    
 
     return 0;
 }
