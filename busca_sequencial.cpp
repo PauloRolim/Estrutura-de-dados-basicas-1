@@ -11,10 +11,11 @@ bool buscaProgressiva(int *vetor, int n_elementos, int chave){
     {      
         if (vetor[ii]==chave)
         {
+            std::cout << "achei, mizera!";
             return true;
         } else
         {
-            return false;;
+            return false;
         }
     }   
 
@@ -28,15 +29,20 @@ bool buscaRegressiva(int *vetor, int n_elementos, int chave){
         return false;
     }
 
-    for(int ii = n_elementos - 1; ii >= 0; ii--)
+    if (vetor[n_elementos - 1] == chave)
     {
-        if (vetor[ii]==chave)
+        return true;
+    }
+    
+    for(int j = n_elementos-1; j >= 0; j--)
+    {
+        if (vetor[j]==chave)
         {
-            return true;
             std::cout << "achei, mizera!";
+            return true;
         } else
         {
-            return false;;
+            return false;
         }
     }   
 
@@ -61,19 +67,17 @@ bool busca_recursiva(int *vetor, int n_elementos, int chave){
 
 int main(int argc, char *argv[]){
 
-    int vetor_entrada[8] = {2,7,9,1,4,3,5};
+    int vetor_entrada[7] = {2,7,9,1,4,3,5};
 
     std::cout << "Os numeros do vetor são: ";
-    for (int i = 0; i < 8; i++)
+    for (int i = 6; i >= 0; i--)
     {
         std::cout << vetor_entrada[i] << " "; 
     }
 
-    bool condicao;
-
     std::cout << " " << std::endl;
 
-    if (buscaRegressiva(vetor_entrada, 8, 2) == true)
+    if (buscaProgressiva(vetor_entrada,7,5) == true)
     {
         std::cout << "Número encontrado!"<< std::endl;
     } else
