@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+float raiz( float numero ) {
+  float precisao = 0.001;
+  float b = numero, a=1;
+  while ( (b-a) >= precisao ) {
+    b = (a+b)/2;
+    a= numero / b;
+  }
+  return b;
+}
+
+int main() {
+    
+    float resultado;
+    
+    resultado = raiz(100);
+    
+    printf("%g\n",resultado);
+    
+    return 0;
+}
