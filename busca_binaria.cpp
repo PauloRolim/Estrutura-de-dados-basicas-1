@@ -126,7 +126,8 @@ int main(int argc, char *argv[]){
         
     }
 
-    std::cout << "L3 = {" << L3[0] << ", " << L3[1] << ", " << L3[2] << "}" << std::endl;*/
+    //std::cout << "L3 = {" << L3[0] << ", " << L3[1] << ", " << L3[2] << "}" << std::endl;*/
 
+    printf("L3 = {%d,%d,%d}", L3[0], L3[1], L3[2]);
     return 0;
 }
