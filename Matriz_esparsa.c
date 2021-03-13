@@ -97,23 +97,45 @@ float verValor(MATRIZ *m, int lin, int col)
     return 0;
 }
 
+float imprimirMatriz(MATRIZ *m, int lin, int col)
+{
+    
+    int ii;
+    int jj;
+    float saida;
+    
+    m->linhas = lin;
+    m->colunas = col;
+    
+    for (ii = 0; ii < lin; ii++)
+    {
+        for (jj = 0; jj < col; jj++)
+        {
+            saida = verValor(m, ii, jj);
+            printf(" %f", saida);
+        }
+        printf("\n");   
+    }
+    
+    return 0;
+}
+
 int main(){
 
     MATRIZ mat;
     float saida;
     float saida2;
 
-    inicializarMatriz(&mat, 3, 4);
+    inicializarMatriz(&mat, 4, 4);
 
+    inserirValor(&mat, 0, 0, 2);
     inserirValor(&mat, 1, 0, 2);
-    inserirValor(&mat, 0, 1, 2);
+    inserirValor(&mat, 2, 0, 0);
+    inserirValor(&mat, 3, 0, 2);
 
-    saida = verValor(&mat, 0, 1);
-    saida2 = verValor(&mat, 1, 0);
 
-    printf(" %f\n", saida);
-    printf(" %f\n", saida2);
-
+    imprimirMatriz(&mat, 4, 4);
+   
     return 0;
 
 }
