@@ -186,23 +186,23 @@ MATRIZ* SomaMatriz(MATRIZ* mat1, MATRIZ* mat2) {
   return c;
 
 }
-
+/*
 int main(){
 
     MATRIZ mat;
     float saida;
     float saida2;
 
-    inicializarMatriz(&mat, 4, 4);
+    inicializarMatriz(&mat, 2, 2);
 
-    inserirValor(&mat, 0, 0, 2);
-    inserirValor(&mat, 1, 0, 2);
-    inserirValor(&mat, 2, 0, 0);
-    inserirValor(&mat, 3, 0, 2);
+    AtribuiMatriz(&mat, 0, 0, 2);
+    AtribuiMatriz(&mat, 0, 1, 2);
+    AtribuiMatriz(&mat, 1, 0, 2);
+    AtribuiMatriz(&mat, 1, 1, 2);
+    
+    exibirMatrizLinhas(&mat);
 
-
-    imprimirMatriz(&mat, 4, 4);
    
     return 0;
 
-}
+}*/
